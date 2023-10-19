@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:storybook/recommended"
+  ],
+  "ignorePatterns": ["dist", "src/app/layout.js"],
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "max-len": ["error", { "code": 120 }],
+    "quote-props": ["error", "consistent"],
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "react/no-array-index-key": "warn",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "react/require-default-props": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": ["**/*.stories.ts", "config/**/*.ts", "*.config.ts"]
+    }]
+  }
+}
